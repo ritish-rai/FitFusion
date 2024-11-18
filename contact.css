@@ -1,0 +1,135 @@
+/* Contact Us Section Styling */
+.contact-section {
+    background-color: #000; /* Black background */
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Info Section */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.contact-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.contact-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-text ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-image {
+    max-width: 45%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.contact-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Form Section */
+.contact-form {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #34c759;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field input, .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+    outline: none;
+    border-color: #34c759;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #34c759;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-text, .contact-image {
+        max-width: 100%;
+    }
+
+    .contact-image {
+        margin-top: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}

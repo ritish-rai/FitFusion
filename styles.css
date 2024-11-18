@@ -1,0 +1,538 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('images/background.jpg') no-repeat center center/cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Spaces out logo, nav, and other items */
+    align-items: center; /* Vertically center elements */
+    padding: 10px 20px;
+    background-color: #333; /* Change to your preferred background color */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white; 
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff; /* Default text color */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* For the underline effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover Effect for Nav Links */
+nav ul li a:hover {
+    color: #34c759; /* Change color on hover */
+}
+
+/* Underline Effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #34c759; /* Color of the underline */
+    bottom: -2px; /* Positioning the underline slightly below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+/* Extend the underline on hover */
+nav ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('images/background.jpg') center/cover no-repeat;
+}
+
+/* Black Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 1; /* Make sure the overlay is on top of the image */
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Make sure content is above the overlay */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Text Animation */
+.text-animation {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    animation: slideInOnce 1.5s ease-in-out;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Text Hover Effect */
+.text-animation:hover {
+    color: #34c759;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Animation Keyframes */
+@keyframes slideInOnce {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Description Paragraph Styling */
+.hero-description {
+    margin-bottom: 30px; /* Adds space between paragraph and button */
+    font-size: 18px;
+    color: #fff;
+}
+
+/* CTA Button */
+.cta-button {
+    padding: 15px 30px;
+    background-color: #34c759;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cta-button a{
+    text-decoration: none;
+
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+    background-color: #2eb04b;
+}
+
+
+
+.reviews {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+blockquote {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+/* Services Section Styling */
+.services-section {
+    background-color: #000; /* Black background */
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #34c759;
+}
+
+/* Services Section Styling */
+.services-section {
+    background-color: #000; /* Black background */
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #34c759;
+}
+
+/* Services Cards Styling */
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px;
+}
+
+/* Card Styling with Animation */
+.card {
+    background-color: #1a1a1a; /* Dark gray background */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Slide up effect */
+    animation: fadeInSlideUp 0.8s ease forwards; /* Apply animation */
+}
+
+/* Animation for Fade-In and Slide-Up Effect */
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Animation for Card */
+.card:hover {
+    background-color: #2b2b2b; /* Lighter black on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #34c759;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #ccc;
+}
+/* Group CrossFit Classes Section Styling */
+.crossfit-section {
+    background-color: #000; /* Dark background */
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.crossfit-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.crossfit-text {
+    max-width: 50%;
+}
+
+.class-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #1a1a1a;
+    color: #34c759;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.crossfit-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.features-list li span {
+    color: #34c759;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+/* Image Styling */
+.crossfit-image {
+    max-width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.crossfit-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crossfit-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .crossfit-text, .crossfit-image {
+        max-width: 100%;
+    }
+
+    .crossfit-image {
+        margin-top: 20px;
+    }
+}
+/* Testimonial Section Styling */
+.testimonial-section {
+    background-color: #000; /* Black background */
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff; /* White text color for contrast */
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-image {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text p {
+    font-size: 16px;
+    color: #34c759; /* White text for readability on black background */
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #f9c74f; /* Gold color for stars */
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+/* Footer Section Styling */
+.footer-section {
+    background-color: #34c759; /* Dark background */
+    color: black; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-nav, .footer-social, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-nav h3, .footer-social h3, .footer-contact h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white; /* Green color for headings */
+}
+
+.footer-nav ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a, .footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover, .footer-social a:hover {
+    color: black; /* Green color on hover */
+}
+
+/* Social Media Icon Styling */
+.social-icon {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: black; /* Green background on hover */
+    transform: scale(1.1); /* Slightly grow the icon */
+}
+
+/* Contact Info Styling */
+.footer-contact p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav, .footer-social, .footer-contact {
+        text-align: center;
+    }
+}
+    
+
+
+
+
+
+
+
